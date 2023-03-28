@@ -1,0 +1,48 @@
+{
+  "name": "@kaysy/cron-expression",
+  "version": "1.0.0",
+  "description": "Cron expression evaluator for javascript",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "tap --reporter specy --ts",
+    "build": "rm -rf ./dist && ttsc -p ./tsconfig.build.json && npm run copypackage",
+    "copypackage": "cp -rf package.json dist"
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude=**/*.spec.ts"
+    ]
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  },
+  "devDependencies": {
+    "@types/expect": "^24.3.0",
+    "@types/node": "^18.14.2",
+    "@types/tap": "^15.0.8",
+    "tap": "^16.3.4",
+    "ts-node": "^10.9.1",
+    "ttypescript": "^1.5.15",
+    "typescript": "^4.5.2",
+    "typescript-transform-paths": "^3.4.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaysy-io/cron-expression.git"
+  },
+  "keywords": [
+    "node-cron",
+    "cron-expression",
+    "cron",
+    "kaysy"
+  ],
+  "author": "Kalesh Kaladharan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaysy-io/cron-expression/issues"
+  },
+  "homepage": "https://github.com/kaysy-io/cron-expression#readme"
+}
